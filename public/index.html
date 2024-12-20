@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="在线文档转换工具，支持将各种格式文档转换为Markdown格式。基于Microsoft MarkItDown开源项目。">
+    <meta name="keywords" content="markdown转换,文档转换,在线工具,MarkItDown,文档处理">
+    <meta name="author" content="[Your Name]">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.vercel.app/">
+    <meta property="og:title" content="MarkItDown Web - 在线文档转换工具">
+    <meta property="og:description" content="在线文档转换工具，支持将各种格式文档转换为Markdown格式。">
+    <meta property="og:image" content="https://your-domain.vercel.app/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.vercel.app/">
+    <meta property="twitter:title" content="MarkItDown Web - 在线文档转换工具">
+    <meta property="twitter:description" content="在线文档转换工具，支持将各种格式文档转换为Markdown格式。">
+    <meta property="twitter:image" content="https://your-domain.vercel.app/og-image.png">
+
+    <title>MarkItDown Web - 在线文档转换工具</title>
+    <link rel="canonical" href="https://your-domain.vercel.app/" />
+    
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        textarea { 
+            width: 100%; 
+            height: 300px;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .license {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MarkItDown Web</h1>
+        <p>简单高效的在线文档转换工具</p>
+    </header>
+
+    <main>
+        <section class="converter">
+            <h2>文件转换</h2>
+            <input type="file" id="fileInput" accept=".doc,.docx,.pdf,.txt">
+            <button onclick="convertFile()">转换为 Markdown</button>
+            <textarea id="result" readonly placeholder="转换结果将显示在这里..."></textarea>
+        </section>
+
+        <section class="features">
+            <h2>功能特点</h2>
+            <ul>
+                <li>支持多种文档格式转换</li>
+                <li>保持文档格式和样式</li>
+                <li>快速高效的在线转换</li>
+                <li>完全免费使用</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="license">
+            <h3>开源许可</h3>
+            <p>本项目基于 MIT 许可证开源。使用了以下开源项目：</p>
+            <ul>
+                <li>
+                    <a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener">Microsoft MarkItDown</a>
+                    - Copyright (c) Microsoft Corporation. Licensed under the MIT license.
+                </li>
+            </ul>
+        </div>
+        <p>© <span id="year">2024</span> [Your Name]. 保留所有权利。</p>
+    </footer>
+
+    <script>
+        // 更新年份
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        async function convertFile() {
+            const fileInput = document.getElementById('fileInput');
+            const resultArea = document.getElementById('result');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                alert('请选择要转换的文件');
+                return;
+            }
+
+            // 文件大小检查
+            if (file.size > 5 * 1024 * 1024) {
+                alert('文件大小不能超过 5MB');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                resultArea.value = '正在转换...';
+                const response = await fetch('/api/convert', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    resultArea.value = data.markdown;
+                } else {
+                    alert('转换失败：' + data.error);
+                    resultArea.value = '';
+                }
+            } catch (error) {
+                alert('请求失败：' + error);
+                resultArea.value = '';
+            }
+        }
+    </script>
+
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MarkItDown Web",
+        "description": "在线文档转换工具，支持将各种格式文档转换为Markdown格式。",
+        "url": "https://your-domain.vercel.app/",
+        "applicationCategory": "工具软件",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</body>
+</html>
