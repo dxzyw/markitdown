@@ -70,3 +70,6 @@ settings.local.py
 Thumbs.db
 
 migrations/
+
+
+node_modules

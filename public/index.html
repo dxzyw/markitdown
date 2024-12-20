@@ -1,154 +1,136 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="在线文档转换工具，支持将各种格式文档转换为Markdown格式。基于Microsoft MarkItDown开源项目。">
-    <meta name="keywords" content="markdown转换,文档转换,在线工具,MarkItDown,文档处理">
-    <meta name="author" content="[Your Name]">
+    <title>MarkItDown - Document Conversion Tool | Convert PDF & Office to Markdown</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="MarkItDown is a powerful document conversion tool that transforms PDF, Word, PowerPoint, and Excel files into Markdown format. Features OCR and audio transcription capabilities.">
+    <meta name="keywords" content="markdown converter,pdf to markdown,word to markdown,document conversion,OCR,audio transcription">
+    <meta name="author" content="Based on Microsoft MarkItDown">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.vercel.app/">
-    <meta property="og:title" content="MarkItDown Web - 在线文档转换工具">
-    <meta property="og:description" content="在线文档转换工具，支持将各种格式文档转换为Markdown格式。">
-    <meta property="og:image" content="https://your-domain.vercel.app/og-image.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://your-domain.vercel.app/">
-    <meta property="twitter:title" content="MarkItDown Web - 在线文档转换工具">
-    <meta property="twitter:description" content="在线文档转换工具，支持将各种格式文档转换为Markdown格式。">
-    <meta property="twitter:image" content="https://your-domain.vercel.app/og-image.png">
-
-    <title>MarkItDown Web - 在线文档转换工具</title>
-    <link rel="canonical" href="https://your-domain.vercel.app/" />
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="MarkItDown - Document Conversion Tool">
+    <meta property="og:description" content="Convert PDF, Office documents, and more to Markdown format with ease">
+    <meta property="og:image" content="https://your-domain.com/og-image.png">
     
-    <style>
-        body {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        textarea { 
-            width: 100%; 
-            height: 300px;
-            margin: 20px 0;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
-            color: #666;
-        }
-        .license {
-            margin-top: 20px;
-            font-size: 0.8em;
-            color: #888;
-        }
-    </style>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://your-domain.com/">
+    <meta name="twitter:title" content="MarkItDown - Document Conversion Tool">
+    <meta name="twitter:description" content="Convert PDF, Office documents, and more to Markdown format with ease">
+    <meta name="twitter:image" content="https://your-domain.com/og-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-domain.com/">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>MarkItDown Web</h1>
-        <p>简单高效的在线文档转换工具</p>
+        <div class="container">
+            <h1>MarkItDown</h1>
+            <p class="subtitle">Powerful Document Conversion Tool</p>
+        </div>
     </header>
 
     <main>
-        <section class="converter">
-            <h2>文件转换</h2>
-            <input type="file" id="fileInput" accept=".doc,.docx,.pdf,.txt">
-            <button onclick="convertFile()">转换为 Markdown</button>
-            <textarea id="result" readonly placeholder="转换结果将显示在这里..."></textarea>
+        <section class="features">
+            <div class="container">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3>Multi-Format Support</h3>
+                        <p>Convert PDF, Word, PowerPoint, Excel, and more</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Smart Recognition</h3>
+                        <p>Built-in OCR and audio transcription</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Easy to Use</h3>
+                        <p>Simple command-line interface</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="features">
-            <h2>功能特点</h2>
-            <ul>
-                <li>支持多种文档格式转换</li>
-                <li>保持文档格式和样式</li>
-                <li>快速高效的在线转换</li>
-                <li>完全免费使用</li>
-            </ul>
+        <section class="downloads">
+            <div class="container">
+                <h2>Download</h2>
+                <div class="download-grid">
+                    <a href="https://storage.example.com/markitdown-win.exe" class="download-button windows">
+                        Windows
+                        <span class="version">v1.0.0</span>
+                        <span class="size">64-bit</span>
+                    </a>
+                    <a href="https://storage.example.com/markitdown-mac" class="download-button mac">
+                        macOS
+                        <span class="version">v1.0.0</span>
+                        <span class="size">Universal</span>
+                    </a>
+                    <a href="https://storage.example.com/markitdown-linux" class="download-button linux">
+                        Linux
+                        <span class="version">v1.0.0</span>
+                        <span class="size">x86_64</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="usage">
+            <div class="container">
+                <h2>Quick Start</h2>
+                <pre><code>markitdown input.pdf > output.md</code></pre>
+                <p>Or use with pipe:</p>
+                <pre><code>cat input.pdf | markitdown > output.md</code></pre>
+            </div>
+        </section>
+
+        <section class="examples">
+            <div class="container">
+                <h2>Examples</h2>
+                <div class="example-grid">
+                    <div class="example-item">
+                        <h3>Convert PDF</h3>
+                        <pre><code>markitdown document.pdf > document.md</code></pre>
+                    </div>
+                    <div class="example-item">
+                        <h3>Convert Word</h3>
+                        <pre><code>markitdown document.docx > document.md</code></pre>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="license">
-            <h3>开源许可</h3>
-            <p>本项目基于 MIT 许可证开源。使用了以下开源项目：</p>
-            <ul>
-                <li>
-                    <a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener">Microsoft MarkItDown</a>
-                    - Copyright (c) Microsoft Corporation. Licensed under the MIT license.
-                </li>
-            </ul>
+    <footer>
+        <div class="container">
+            <p>Based on <a href="https://github.com/microsoft/markitdown">Microsoft MarkItDown</a> | MIT License</p>
+            <p>Copyright © 2024 | All rights reserved</p>
         </div>
-        <p>© <span id="year">2024</span> [Your Name]. 保留所有权利。</p>
     </footer>
 
-    <script>
-        // 更新年份
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        async function convertFile() {
-            const fileInput = document.getElementById('fileInput');
-            const resultArea = document.getElementById('result');
-            const file = fileInput.files[0];
-            
-            if (!file) {
-                alert('请选择要转换的文件');
-                return;
-            }
-
-            // 文件大小检查
-            if (file.size > 5 * 1024 * 1024) {
-                alert('文件大小不能超过 5MB');
-                return;
-            }
-
-            const formData = new FormData();
-            formData.append('file', file);
-
-            try {
-                resultArea.value = '正在转换...';
-                const response = await fetch('/api/convert', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    resultArea.value = data.markdown;
-                } else {
-                    alert('转换失败：' + data.error);
-                    resultArea.value = '';
-                }
-            } catch (error) {
-                alert('请求失败：' + error);
-                resultArea.value = '';
-            }
-        }
-    </script>
-
-    <!-- 结构化数据 -->
+    <!-- Schema.org markup for Google -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "MarkItDown Web",
-        "description": "在线文档转换工具，支持将各种格式文档转换为Markdown格式。",
-        "url": "https://your-domain.vercel.app/",
-        "applicationCategory": "工具软件",
-        "operatingSystem": "All",
+        "@type": "SoftwareApplication",
+        "name": "MarkItDown",
+        "description": "A powerful document conversion tool that transforms PDF, Word, PowerPoint, and Excel files into Markdown format.",
+        "operatingSystem": "Windows, macOS, Linux",
+        "applicationCategory": "Utility Software",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
-        }
+        },
+        "downloadUrl": "https://your-domain.com/",
+        "softwareVersion": "1.0.0",
+        "license": "https://opensource.org/licenses/MIT"
     }
     </script>
 </body>

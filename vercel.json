@@ -1,10 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/convert.py", "use": "@vercel/python" }
+    { "src": "public/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/convert", "dest": "api/convert.py" },
     { "src": "/(.*)", "dest": "/public/$1" }
   ]
 }
