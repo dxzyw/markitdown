@@ -43,16 +43,34 @@
                 <h2>Key Features</h2>
                 <div class="feature-grid">
                     <div class="feature-item">
-                        <h3>Multi-Format Support</h3>
-                        <p>Convert PDF, Word, PowerPoint, Excel, and more</p>
+                        <h3>Document Conversion</h3>
+                        <ul>
+                            <li>PDF to Markdown conversion</li>
+                            <li>Microsoft Word (.docx, .doc) support</li>
+                            <li>PowerPoint presentations (.pptx)</li>
+                            <li>Excel spreadsheets (.xlsx)</li>
+                            <li>Maintains document structure</li>
+                        </ul>
                     </div>
                     <div class="feature-item">
                         <h3>Smart Recognition</h3>
-                        <p>Built-in OCR and audio transcription</p>
+                        <ul>
+                            <li>Built-in OCR technology</li>
+                            <li>Table structure preservation</li>
+                            <li>Image extraction & embedding</li>
+                            <li>List formatting support</li>
+                            <li>Heading hierarchy preservation</li>
+                        </ul>
                     </div>
                     <div class="feature-item">
-                        <h3>Easy to Use</h3>
-                        <p>Simple command-line interface</p>
+                        <h3>User Experience</h3>
+                        <ul>
+                            <li>Simple GUI interface</li>
+                            <li>Drag & drop support</li>
+                            <li>Preview converted content</li>
+                            <li>Quick file saving</li>
+                            <li>Error handling & feedback</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -62,45 +80,100 @@
             <div class="container">
                 <h2>Download</h2>
                 <div class="download-grid">
-                    <a href="https://storage.example.com/markitdown-win.exe" class="download-button windows">
+                    <a href="https://github.com/dxzyw/markitdown/releases/download/v1.0.0/markitdown-windows.exe" class="download-button windows">
                         Windows
                         <span class="version">v1.0.0</span>
-                        <span class="size">64-bit</span>
+                        <span class="size">GUI Package</span>
                     </a>
-                    <a href="https://storage.example.com/markitdown-mac" class="download-button mac">
+                    <a href="https://github.com/dxzyw/markitdown/releases/download/v1.0.0/markitdown-mac" class="download-button mac">
                         macOS
                         <span class="version">v1.0.0</span>
-                        <span class="size">Universal</span>
+                        <span class="size">GUI Package</span>
                     </a>
-                    <a href="https://storage.example.com/markitdown-linux" class="download-button linux">
+                    <a href="https://github.com/dxzyw/markitdown/releases/download/v1.0.0/markitdown-linux" class="download-button linux">
                         Linux
                         <span class="version">v1.0.0</span>
-                        <span class="size">x86_64</span>
+                        <span class="size">GUI Package</span>
                     </a>
                 </div>
+                
             </div>
         </section>
 
         <section class="usage">
             <div class="container">
-                <h2>Quick Start</h2>
-                <pre><code>markitdown input.pdf > output.md</code></pre>
-                <p>Or use with pipe:</p>
-                <pre><code>cat input.pdf | markitdown > output.md</code></pre>
+                <h2>Quick Start Guide</h2>
+                
+                <div class="quick-start-grid">
+                    <div class="quick-start-item">
+                        <h3>1. Installation</h3>
+                        <p>Download and install the appropriate version for your operating system.</p>
+                        <ul>
+                            <li>Windows: Run the .exe installer</li>
+                            <li>macOS: Open the .dmg file</li>
+                            <li>Linux: Use the binary directly</li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-start-item">
+                        <h3>2. Basic Usage</h3>
+                        <p>Convert files using the GUI:</p>
+                        <ol>
+                            <li>Launch MarkItDown</li>
+                            <li>Click "Select File" to choose your document</li>
+                            <li>Click "Convert" to process</li>
+                            <li>Save the resulting markdown</li>
+                        </ol>
+                    </div>
+
+                    <div class="quick-start-item">
+                        <h3>3. Command Line Usage</h3>
+                        <p>For advanced users, use the command line:</p>
+                        <pre><code># Basic conversion
+markitdown input.pdf > output.md
+
+# With specific options
+markitdown --format pdf input.pdf > output.md
+
+# Process multiple files
+markitdown *.pdf --output-dir ./markdown</code></pre>
+                    </div>
+                </div>
+
+                <div class="usage-tips">
+                    <h3>Pro Tips</h3>
+                    <ul>
+                        <li>Use drag & drop for quick file selection</li>
+                        <li>Preview content before saving</li>
+                        <li>Check the status bar for conversion progress</li>
+                        <li>Supported formats: PDF, DOCX, DOC, PPTX, XLSX</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section class="examples">
             <div class="container">
-                <h2>Examples</h2>
+                <h2>Common Use Cases</h2>
                 <div class="example-grid">
                     <div class="example-item">
-                        <h3>Convert PDF</h3>
-                        <pre><code>markitdown document.pdf > document.md</code></pre>
+                        <h3>PDF Documents</h3>
+                        <pre><code># Convert PDF with OCR
+markitdown --ocr document.pdf > document.md
+
+# Preserve tables
+markitdown --keep-tables report.pdf > report.md</code></pre>
                     </div>
                     <div class="example-item">
-                        <h3>Convert Word</h3>
-                        <pre><code>markitdown document.docx > document.md</code></pre>
+                        <h3>Office Documents</h3>
+                        <pre><code># Convert Word document
+markitdown document.docx > document.md
+
+# Convert PowerPoint
+markitdown slides.pptx > slides.md
+
+# Convert Excel
+markitdown data.xlsx > data.md</code></pre>
                     </div>
                 </div>
             </div>
