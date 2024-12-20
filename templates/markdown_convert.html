@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Essential SEO Meta Tags -->
+    <title>Convert Documents to Markdown | Free Online Converter Tool</title>
+    <meta name="description" content="Free online tool to convert PDF, Word, Excel, and PowerPoint documents to Markdown format. Based on Microsoft's MarkItDown technology.">
+    <meta name="keywords" content="markdown converter, document converter, pdf to markdown, word to markdown, document transformation, microsoft markitdown">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Document to Markdown Converter">
+    <meta property="og:description" content="Convert your documents to clean Markdown format online">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/markdown">
+    <meta property="og:image" content="https://yourdomain.com/static/images/converter-preview.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Document to Markdown Converter">
+    <meta name="twitter:description" content="Convert your documents to clean Markdown format online">
+    <meta name="twitter:image" content="https://yourdomain.com/static/images/converter-preview.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/markdown">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Document to Markdown Converter",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Based on Microsoft MarkItDown"
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <header class="bg-light py-3">
+        <nav class="container">
+            <h1 class="h2">Document to Markdown Converter</h1>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Feature Introduction -->
+                <div class="mb-5">
+                    <h2>Convert Your Documents to Markdown</h2>
+                    <p class="lead">Transform various document formats into clean, readable Markdown.</p>
+                    
+                    <!-- SEO-optimized feature list -->
+                    <div class="feature-list mt-4">
+                        <h3 class="h5">Supported Document Types:</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-file-pdf"></i> PDF Documents</li>
+                            <li><i class="bi bi-file-word"></i> Microsoft Word Files</li>
+                            <li><i class="bi bi-file-excel"></i> Excel Spreadsheets</li>
+                            <li><i class="bi bi-file-slides"></i> PowerPoint Presentations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Converter Tool -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div id="dropZone" class="drop-zone mb-4">
+                            <i class="bi bi-cloud-upload display-4"></i>
+                            <p>Drop your document here or click to upload</p>
+                            <input type="file" id="fileInput" class="d-none" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+                        </div>
+
+                        <div class="progress mb-3 d-none">
+                            <div class="progress-bar"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Markdown Output</label>
+                            <textarea id="resultText" class="form-control" rows="12" readonly></textarea>
+                        </div>
+
+                        <div class="text-end">
+                            <button id="downloadBtn" class="btn btn-primary" disabled>
+                                <i class="bi bi-download"></i> Download Markdown
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEO Content -->
+                <section class="mt-5">
+                    <h3>Why Convert to Markdown?</h3>
+                    <p>Markdown is a lightweight markup language that creates formatted text using plain-text syntax. It's widely used for:</p>
+                    <ul>
+                        <li>Documentation</li>
+                        <li>README files</li>
+                        <li>Technical writing</li>
+                        <li>Blog posts</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <!-- License Section -->
+                    <div class="license-section">
+                        <h4>License Information</h4>
+                        <p>Based on <a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener noreferrer">Microsoft MarkItDown</a></p>
+                        <small class="text-muted">MIT License - Copyright (c) Microsoft Corporation.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/converter.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID');
+    </script>
+</body>
+</html>

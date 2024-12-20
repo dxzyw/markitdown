@@ -1,0 +1,4 @@
+Flask==2.0.1
+Werkzeug==2.0.1
+git+https://github.com/microsoft/markitdown.git#egg=markitdown
+gunicorn==20.1.0 
