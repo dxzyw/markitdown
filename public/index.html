@@ -40,37 +40,44 @@
     <main>
         <section class="features">
             <div class="container">
-                <h2>Key Features</h2>
-                <div class="feature-grid">
-                    <div class="feature-item">
-                        <h3>Document Conversion</h3>
-                        <ul>
-                            <li>PDF to Markdown conversion</li>
-                            <li>Microsoft Word (.docx, .doc) support</li>
-                            <li>PowerPoint presentations (.pptx)</li>
-                            <li>Excel spreadsheets (.xlsx)</li>
-                            <li>Maintains document structure</li>
-                        </ul>
+                <div class="features-wrapper">
+                    <div class="features-content">
+                        <h2>Key Features</h2>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <h3>Document Conversion</h3>
+                                <ul>
+                                    <li>PDF to Markdown conversion</li>
+                                    <li>Microsoft Word (.docx, .doc) support</li>
+                                    <li>PowerPoint presentations (.pptx)</li>
+                                    <li>Excel spreadsheets (.xlsx)</li>
+                                    <li>Maintains document structure</li>
+                                </ul>
+                            </div>
+                            <div class="feature-item">
+                                <h3>Smart Recognition</h3>
+                                <ul>
+                                    <li>Built-in OCR technology</li>
+                                    <li>Table structure preservation</li>
+                                    <li>Image extraction & embedding</li>
+                                    <li>List formatting support</li>
+                                    <li>Heading hierarchy preservation</li>
+                                </ul>
+                            </div>
+                            <div class="feature-item">
+                                <h3>User Experience</h3>
+                                <ul>
+                                    <li>Simple GUI interface</li>
+                                    <li>Drag & drop support</li>
+                                    <li>Preview converted content</li>
+                                    <li>Quick file saving</li>
+                                    <li>Error handling & feedback</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <h3>Smart Recognition</h3>
-                        <ul>
-                            <li>Built-in OCR technology</li>
-                            <li>Table structure preservation</li>
-                            <li>Image extraction & embedding</li>
-                            <li>List formatting support</li>
-                            <li>Heading hierarchy preservation</li>
-                        </ul>
-                    </div>
-                    <div class="feature-item">
-                        <h3>User Experience</h3>
-                        <ul>
-                            <li>Simple GUI interface</li>
-                            <li>Drag & drop support</li>
-                            <li>Preview converted content</li>
-                            <li>Quick file saving</li>
-                            <li>Error handling & feedback</li>
-                        </ul>
+                    <div class="features-image">
+                        <img src="screenshot.png" alt="MarkItDown GUI Interface" class="feature-screenshot">
                     </div>
                 </div>
             </div>
@@ -85,26 +92,71 @@
                         <span class="version">v1.0.0</span>
                         <span class="size">GUI Package</span>
                     </a>
-                    <a href="https://github.com/dxzyw/markitdown/releases/download/v1.0.0/markitdown-mac" class="download-button mac">
+                    <div class="download-button mac disabled">
                         macOS
-                        <span class="version">v1.0.0</span>
-                        <span class="size">GUI Package</span>
-                    </a>
-                    <a href="https://github.com/dxzyw/markitdown/releases/download/v1.0.0/markitdown-linux" class="download-button linux">
+                        <span class="version">Coming Soon</span>
+                        <span class="size">In Development</span>
+                    </div>
+                    <div class="download-button linux disabled">
                         Linux
-                        <span class="version">v1.0.0</span>
-                        <span class="size">GUI Package</span>
-                    </a>
+                        <span class="version">Coming Soon</span>
+                        <span class="size">In Development</span>
+                    </div>
                 </div>
-                
             </div>
         </section>
 
-        <section class="usage">
+        <section class="usage" id="getting-started">
             <div class="container">
-                <h2>Quick Start Guide</h2>
+                <h2>Getting Started with MarkItDown</h2>
                 
                 <div class="quick-start-grid">
+                    <div class="quick-start-item installation">
+                        <h3>Simple Installation</h3>
+                        <p>Three easy steps to get started with MarkItDown document converter:</p>
+                        <div class="step-box">
+                            <h4>Windows Users</h4>
+                            <ol>
+                                <li>Download the Windows GUI package</li>
+                                <li>Double-click the .exe file</li>
+                                <li>Follow the installation wizard</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="step-box">
+                            <h4>macOS Users</h4>
+                            <ol>
+                                <li>Download the macOS package</li>
+                                <li>Move to Applications folder</li>
+                                <li>Launch from Applications</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="step-box">
+                            <h4>Linux Users</h4>
+                            <ol>
+                                <li>Download the Linux binary</li>
+                                <li>Make it executable: <code>chmod +x markitdown</code></li>
+                                <li>Run the application</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="quick-start-item usage">
+                        <h3>Converting Documents</h3>
+                        <div class="usage-method">
+                            <h4>Using the Graphical Interface</h4>
+                            <p>Transform your documents with our user-friendly GUI:</p>
+                            <ol>
+                                <li>Open MarkItDown application</li>
+                                <li>Select your document using the "Select File" button or drag & drop</li>
+                                <li>Click "Convert" to start the transformation</li>
+                                <li>Preview the converted markdown content</li>
+                                <li>Save your markdown file</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="usage-method">
                     <div class="quick-start-item">
                         <h3>1. Installation</h3>
                         <p>Download and install the appropriate version for your operating system.</p>
