@@ -2,7 +2,7 @@ from flask import Flask
 from seo import seo
 import os
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder="../templates", static_folder="../static")
 
 # 配置
 app.config.update(
