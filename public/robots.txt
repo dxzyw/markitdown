@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://markitdown.top/sitemap.xml
+
+# Allow crawling of main sections
+Allow: /features
+Allow: /download
+Allow: /docs
+Allow: /use-cases
+
+# Prevent caching of temporary files
+Disallow: /temp/
+Disallow: /download/temp/
+
+# Reasonable crawl rate
+Crawl-delay: 10
